@@ -94,7 +94,7 @@ body{
 }
 
 .sticky .logo{
-    background-image: url(../images/black-logo.png);
+    background-image: url(../images/0004-min.jpg);
 }
 
 .sticky .navbar-menu a{
@@ -165,7 +165,7 @@ body{
     background-position: center;
     width: 100%;
     height: 100vh;
-    animation: slide 40s infinite;
+    animation: slide 20s infinite;
 }
 .content{
     color: #fff;
@@ -222,13 +222,14 @@ body{
 }
 /**/
 /**********Flats*/
+
 .text h2{
     direction: rtl;
     color: #fff;
     font-weight: bold;
     text-align: center;
     position: relative;
-    padding: 80px 0 10px;
+    padding: 130px 0 10px;
     margin-bottom: -18px;
     transform: scale(0.94);
     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
@@ -255,7 +256,7 @@ body{
 }
 
 .view-more{
-    margin: 30px 600px 0 0 ;
+    margin: 70px 600px 0 0 ;
     position: absolute;
     width: 155px;
     height: 50px;
@@ -471,40 +472,68 @@ body{
 
 
 /*CONTACT FORM*/
-.contact-box{
-    margin: 16px auto;
-    max-width: 850px;
-    /*max-height: 850px;*/
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    align-items: center;
+.contact-text h2{
+    direction: rtl;
+    color: #fff;
+    font-weight: bold;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0px 0px 19px 5px rgba(19, 60, 59, 0.64);
-}
-.right-form{
-    background: #d6b989;
-    background-size: cover;
-    height: 100%;
+    position: relative;
+    padding: 100px 0 10px;
+    margin-bottom: -18px;
+    transform: scale(0.94);
+    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
-.left-form{
-    padding: 25px 40px;
-}
-.left-form h2{
-    position: relative;
-    padding: 0 0 10px;
-    margin-bottom: 10px;
-}
-.left-form h2:after{
+.contact-text h2:after{
     content: '';
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
     height: 3px;
-    width: 90px;
+    width: 150px;
+    /*border-radius: 2px;*/
+    background-color: #00a108;
+
+}
+.contact-box{
+    margin: 50px auto;
+    width: 100%;
+    max-width: 1200px;
+    max-height: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    direction: rtl;
+}
+.right-form{
+    background: #d6b989;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.left-form{
+    padding: 25px 40px;
+    /*background: #0f100f;*/
+}
+.left-form h2{
+    position: relative;
+    padding: 0 0 20px;
+    margin-bottom: 5px;
+}
+.left-form h2:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 15px;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 125px;
     /*border-radius: 2px;*/
     background-color: #133c3b;
 
@@ -528,40 +557,48 @@ body{
 }
 
 .submit-form{
-    width: 100%;
+    width: 25%;
     padding: 0.5rem 1rem;
     background-color: #133c3b;
     color: #fff;
     font-size: 1.1rem;
     border: none;
+    border-radius: 20px;
     outline: none;
     cursor: pointer;
     transition: .3s;
 }
 
 .submit-form:hover{
-    background-color: #133c3b;
+    background-color: #d6b989;
+    color: #133c3b;
 }
 .field:focus{
     border: 2px solid rgba(19, 60, 59, 0.2);
     background-color: #fff;
 }
 
+@media screen and (max-width: 880px){
+    .contact-box{
+        grid-template-columns: 1fr;
+    }
+    .right-form{
+        height: 200px;
+    }
+}
 
 /************FOOTER*/
 footer{
     position: relative;
     bottom: 0;
     width: 100%;
-    /*background: rgba(19, 60, 59,0.8);*/
-    background:linear-gradient( to left ,rgba(19, 60, 59, 0.2), rgba(19, 60, 59, 0.9)), url('../images/image--002.jpg');
-    /*direction: rtl;*/
+    background:linear-gradient( to left ,rgba(19, 60, 59, 0.2), rgba(19, 60, 59, 0.9)), url('../images/image--003.jpg');
     background-size: cover;
 }
 
 .content{
     background: rgba(0,0,0,-1.7);
-    height: 40vh;
+    height: 20vh;
 }
 .main-content{
     display: flex;
@@ -578,12 +615,11 @@ footer{
     color: #d6b989;
 }
 .box p{
-    font-size: 17px;
-    letter-spacing: 1.3px;
+    font-size: 20px;
     line-height: 30px;
 }
 .box .content{
-    margin: 20px 0 0  0px;
+    margin: 2px 0 0  0;
 }
 .box .content span{
     /*text-align: justify;*/
@@ -591,30 +627,33 @@ footer{
 }
 
 .social{
-    width: 65%;
-    margin: -55px 140px 0 0 ;
+    width: 100%;
     height: 7vh;
-    background: rgba(19, 60, 59, 0.9);
+    /*background: rgba(17, 60, 36, 0.4);*/
+    border-radius: 20px;
 }
 
 .social a{
-    padding:  0 20px;
+    padding:  0 12px;
+    text-align: center;
 
 }
 .social a span{
-    height: 40px;
-    width: 40px;
-    /*background: rgba(119, 123, 119, 0.5);*/
+    display: inline-block;
+    padding: 0 12px;
+    justify-content: center;
+    /*margin: 0 67px 0 33px;*/
+    background: rgba(17, 60, 36, 0.5);
     line-height: 50px;
     text-align: center;
     font-size: 18px;
     border-radius: 5px;
-    transition: 0.3s;
-    color: #fff;
-}
+    transition: 0.3s ease-in-out;
+    color: #d6b989;}
 
 .social a span:hover {
-    background: #133c3b;
+    background: #d6b989;
+    color: #133c3b;
 }
 
 
