@@ -181,14 +181,7 @@ body{
     background-color: rgba(0,0,0,0.5);
 
 }
-/*.principal{*/
-/*    left: 50%;*/
-/*    top: 50%;*/
-/*    transform: translate(-50%,-50%);*/
-/*    position: absolute;*/
-/*    letter-spacing: 5px;*/
-/*    text-align: center;*/
-/*}*/
+
 /*Images SLIDER*/
 @keyframes slide {
     0%{
