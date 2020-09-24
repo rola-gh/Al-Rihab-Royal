@@ -9,7 +9,8 @@ html{
 }
 
 body{
-    background-color: rgb(19, 60, 59);
+    background:linear-gradient( to left ,rgba(19, 60, 59, 0.5), rgba(19, 60, 59, 0.9)), url('../images/image--003.jpg');
+    /*background-color: rgb(19, 60, 59);*/
     background-size: cover;
     background-position: center;
     margin: 0;
@@ -19,6 +20,7 @@ body{
     font-family: 'Cairo', sans-serif;
     text-decoration: none;
 }
+
 
 /****************STYLE NAV BAR******************/
 .navbar{
@@ -150,6 +152,11 @@ body{
         transform: rotate(45deg);
         bottom: 14px;
     }
+    .slider{
+        width: 100%;
+        height: 50vh;
+
+    }
 }
 
 /***************END NAV BAR*******************/
@@ -174,14 +181,14 @@ body{
     background-color: rgba(0,0,0,0.5);
 
 }
-.principal{
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
-    letter-spacing: 5px;
-    text-align: center;
-}
+/*.principal{*/
+/*    left: 50%;*/
+/*    top: 50%;*/
+/*    transform: translate(-50%,-50%);*/
+/*    position: absolute;*/
+/*    letter-spacing: 5px;*/
+/*    text-align: center;*/
+/*}*/
 /*Images SLIDER*/
 @keyframes slide {
     0%{
@@ -242,7 +249,7 @@ body{
     bottom: 0;
     transform: translateX(-50%);
     height: 3px;
-    width: 130px;
+    width: 220px;
     /*border-radius: 2px;*/
     background-color: #00a108;
 
@@ -251,12 +258,12 @@ body{
     display: grid;
     grid-gap: 1rem;
     padding: 4rem;
-    margin: 70px 10px 120px 10px ;
+    margin: 10px 10px 120px 10px ;
     direction: rtl;
 }
 
 .view-more{
-    margin: 70px 600px 0 0 ;
+    margin: 20px 600px 0 0 ;
     position: absolute;
     width: 155px;
     height: 50px;
@@ -274,8 +281,8 @@ body{
 .view-more:hover{
     background-position: 100%;
     transform: translateX(0.5rem);
-    background-color: #d6b989;
-    color: #133c3b;
+    background-color: #113c24;
+    color: #d6b989;
     outline: none;
 }
 
@@ -283,15 +290,22 @@ body{
     .page-content {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 @media (min-width: 800px) {
     .page-content {
         grid-template-columns: repeat(4, 1fr);
     }
+    .card{
+        width: 100%;
+    }
+
 }
 
 .card {
-    max-width: 400px;
+    max-width: 500px;
+    max-height:350px;
+    /*height: 350px;*/
     position: relative;
     display: -webkit-box;
     display: flex;
@@ -308,7 +322,9 @@ body{
 @media (min-width: 600px) {
     .card {
         max-height: 350px;
+        width:100%;
     }
+
 }
 .card:before {
     content: '';
@@ -393,17 +409,19 @@ body{
 .btn {
     cursor: pointer;
     margin-top: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.65rem;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
     font-weight: bold;
     letter-spacing: 0.025rem;
     text-transform: uppercase;
     color: white;
     background-color: #133c3b;
     border: none;
+    border-radius: 5px;
 }
 .btn:hover {
     background-color: #d6b989;
+    color: #133c3b;
 }
 .btn:focus {
     outline: 0.5px dashed #0f100f;
@@ -519,12 +537,13 @@ body{
 
 .left-form{
     padding: 25px 40px;
-    /*background: #0f100f;*/
+    background: #133c3b;
 }
 .left-form h2{
     position: relative;
     padding: 0 0 20px;
     margin-bottom: 5px;
+    color: white;
 }
 .left-form h2:after{
     content: '';
@@ -535,14 +554,14 @@ body{
     height: 3px;
     width: 125px;
     /*border-radius: 2px;*/
-    background-color: #133c3b;
+    background-color: #00a108;
 
 }
 .field{
     width: 100%;
     border: 2px solid rgba(0, 0, 0, 0);
     outline: none;
-    background-color: rgba(230, 230, 230, 0.6);
+    background-color: rgb(255, 255, 255);
     padding: 0.5rem 1rem;
     font-size: 1.1rem;
     margin-bottom: 22px;
@@ -550,7 +569,7 @@ body{
 }
 
 .field:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 .left-form textarea{
     min-height: 150px;
@@ -559,8 +578,8 @@ body{
 .submit-form{
     width: 25%;
     padding: 0.5rem 1rem;
-    background-color: #133c3b;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #113c24;
     font-size: 1.1rem;
     border: none;
     border-radius: 20px;
@@ -570,7 +589,7 @@ body{
 }
 
 .submit-form:hover{
-    background-color: #d6b989;
+    background-color: #00a108;
     color: #133c3b;
 }
 .field:focus{
@@ -585,6 +604,7 @@ body{
     .right-form{
         height: 200px;
     }
+
 }
 
 /************FOOTER*/
@@ -592,7 +612,7 @@ footer{
     position: relative;
     bottom: 0;
     width: 100%;
-    background:linear-gradient( to left ,rgba(19, 60, 59, 0.2), rgba(19, 60, 59, 0.9)), url('../images/image--003.jpg');
+    background:linear-gradient( to left , rgba(4, 13, 13, 0.98), rgba(19, 60, 59, 0.9));
     background-size: cover;
 }
 
@@ -617,6 +637,7 @@ footer{
 .box p{
     font-size: 20px;
     line-height: 30px;
+    color: white;
 }
 .box .content{
     margin: 2px 0 0  0;
@@ -644,7 +665,7 @@ footer{
     justify-content: center;
     /*margin: 0 67px 0 33px;*/
     background: rgba(17, 60, 36, 0.5);
-    line-height: 50px;
+    line-height: 35px;
     text-align: center;
     font-size: 18px;
     border-radius: 5px;
