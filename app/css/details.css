@@ -1,6 +1,6 @@
-/*body{*/
-/*    background: #133c3b !important;*/
-/*}*/
+body{
+    background: #133c3b !important;
+}
 
 
 .main-image{
@@ -268,7 +268,8 @@
     }
 }
 .left-side{
-    background-color: rgba(27, 60, 58, 0.8);
+    background-color: #d6b98921;
+    border-radius: 15px;
     /*background: linear-gradient(to bottom,  rgba(27, 60, 58, 0.5) ,  rgba(27, 60, 58, 0.95)) , url("../images/image--003.jpg");*/
 }
 .left-side h2{

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade&display=swap');
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -9,7 +11,7 @@ html{
 }
 
 body{
-    background:linear-gradient( to left , rgb(17, 60, 36,0.4), rgba(19, 60, 59,0.9)), url("../../img/image--004.jpg");
+    background:linear-gradient( to left , rgb(17, 60, 36,0.6), rgba(19, 60, 59,0.9));
     background-size: cover;
     /*width: 100%;*/
     background-repeat: no-repeat;
@@ -18,7 +20,7 @@ body{
     padding: 0;
     line-height: 1.7;
     font-weight: normal;
-    font-family: 'Lateef', sans-serif;
+    font-family: 'Tajawal', sans-serif;
     text-decoration: none;
 }
 
@@ -172,62 +174,104 @@ body{
 }
 
 /***************END NAV BAR*******************/
-/**/
 
-
-/*STYLE SLIDER*/
-.load{
-    animation: slide 5s;
-}
-.slider{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+/***********SLIDER************/
+.slideshow{
     width: 100%;
     height: 100vh;
-    animation: slide 15s infinite;
+    position: relative;
+    overflow: hidden;
+}
+.slideshow-item{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    opacity: 0;
+    animation: cycleImages 31s infinite;
 }
 
+.slideshow-item img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    animation: zoom 31s infinite;
+}
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+    animation-delay: 0s;
+}
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+    animation-delay: 10s;
+}
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+    animation-delay: 20s;
+}
+.slideshow-item-text{
+    max-width: 30%;
+    position: absolute;
+    top: 80%;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    background-color: rgba(1, 4, 2, 0.82);
+    color: #d6b989;
+    padding: 0 5px;
+    border-radius: 10px;
+}
+.slideshow-item-text h5{
+    font-size: 3rem;
+    font-family: 'Rakkas', cursive;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
 
-/*Images SLIDER*/
-@keyframes slide {
-    0%{
-        background-image: url("../images/0004-min.jpg");
-    }
-    20%{
-        background-image: url("../images/0004-min.jpg");
+.slideshow-item-text p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-family: 'Scheherazade', serif;
 
-    }
-    20.01%{
-        background-image: url("../images/image--002.jpg");
+}
+@keyframes cycleImages {
+    25%{
+        opacity: 1;
     }
     40%{
-        background-image: url("../images/image--002.jpg");
-
-    }
-    40.01%{
-        background-image: url("../images/image--003.jpg");
-    }
-    60%{
-        background-image: url("../images/image--003.jpg");
-
-    }
-    60.01%{
-        background-image: url("../images/image--002.jpg");
-    }
-    80%{
-        background-image: url("../images/image--002.jpg");
-
-    }
-    80.01%{
-        background-image: url("../images/image--003.jpg");
-    }
-    100%{
-        background-image: url("../images/image--003.jpg");
-
+        opacity: 0;
     }
 }
-/* */
+@keyframes zoom {
+    100%{
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 1000px){
+    .slideshow-item-text{
+        max-width: 70%;
+        padding: 5rem 1rem;
+    }
+    .slideshow-item-text h5{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 767px){
+    .slideshow-item-text{
+        max-width: 100%;
+        padding: 2rem;
+        top: initial;
+        bottom: 0;
+        transform: initial;
+    }
+    .slideshow-item-text h5{
+        font-size: 3rem;
+    }
+    .slideshow-item-text p{
+        font-size: 1.4rem;
+    }
+}
+
+/***********END SLIDER HEADER */
 /*PROFILE*/
 #profile{
     /*padding: 20px;*/
