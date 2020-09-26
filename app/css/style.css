@@ -27,17 +27,24 @@ body{
 
 
 /****************STYLE NAV BAR******************/
-@keyframes a {
-    from{
-        padding: 5px 0;
-        opacity: 0;
+/*@keyframes antFadeIn{*/
+/*    0%{*/
+/*        transform: scale3d(.75,.75,1);*/
+/*        opacity: 0;*/
 
-    }
-    to{
-        padding: 20px 0;
-        opacity: 1;
-    }
-}
+/*    }*/
+/*    70%{*/
+/*        transform: scale3d(.75,.75,1);*/
+/*        opacity: 0;*/
+
+/*    }*/
+/*    100%{*/
+/*        transform: scale3d(1,1,1);*/
+/*        opacity: 0;*/
+
+/*    }*/
+
+/*}*/
 .navbar{
     position: fixed;
     background-color:rgba(0,0,0,0.54);
@@ -46,7 +53,6 @@ body{
     top: 0;
     z-index: 9999;
     transition: .3s linear;
-    animation: a 3s;
 }
 
 .inner-width{
@@ -188,14 +194,14 @@ body{
     height: inherit;
     position: absolute;
     opacity: 0;
-    animation: cycleImages 20s infinite;
+    animation: cycleImages 30s infinite;
 }
 
 .slideshow-item img{
     width: 100%;
     height: 100%;
     object-fit:cover ;
-    animation: zoom 20s infinite;
+    animation: zoom 30s infinite;
 }
 .slideshow-item:nth-child(1),
 .slideshow-item:nth-child(1) img{
@@ -203,35 +209,38 @@ body{
 }
 .slideshow-item:nth-child(2),
 .slideshow-item:nth-child(2) img{
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 .slideshow-item:nth-child(3),
 .slideshow-item:nth-child(3) img{
-    animation-delay: 10s;
+    animation-delay: 20s;
 }
 .slideshow-item-text{
     max-width: 30%;
     position: absolute;
     top: 80%;
-    right: 0;
-    text-align: center;
+    right: 30px;
+    display: flow;
+    /* text-align: center; */
     transform: translateY(-50%);
-    background-color: rgba(1, 4, 2, 0.82);
-    color: #d6b989;
-    padding: 0 10px;
-    border-radius: 10px;
+    background-color: #0d322fab;
+    color: rgba(1, 5, 1, 0.95);
+    padding: 28px 76px;
+    border-radius: 141px;
 }
 .slideshow-item-text h5{
-    font-size: 3rem;
+    font-size: 35px;
     font-family: 'Rakkas', cursive;
     margin-bottom: 0.5rem;
     margin-top: 0;
 }
 
 .slideshow-item-text p{
-    font-size: 1.6rem;
-    font-weight: 300;
-    font-family: 'Scheherazade', serif;
+    font-size:25px;
+    font-weight: 400;
+    color: #d6b989;
+    /*font-family: 'Scheherazade', serif;*/
+    font-family: 'Rakkas', cursive;
 
 }
 @keyframes cycleImages {
@@ -239,14 +248,18 @@ body{
         opacity: 1;
     }
     40%{
-        opacity: 0;
+        opacity: 2;
     }
 }
 @keyframes zoom {
+    25%{
+
+    }
     100%{
-        transform: scale(1.3);
+        transform: scale(1.5);
     }
 }
+
 @media screen and (max-width: 1000px){
     .slideshow-item-text{
         max-width: 70%;
@@ -310,29 +323,28 @@ body{
     background-color: #10c53a;
 
 }
-.divText {
-    pointer-events: none;
-    padding: 50px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 600;
-    color: #ada77b;
-    /*background: rgba(1, 5, 1, 0.13);*/
-}
-@media (min-width: 1200px) {
-    .divText{
-        /*background: rgba(1, 5, 1, 0.13);*/
-        top: 20px;
-        font-size:23px;
-    }
-}
+/*.divText {*/
+/*    pointer-events: none;*/
+/*    padding: 50px;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 80%;*/
+/*    height: 100%;*/
+/*    text-align: center;*/
+/*    font-size: 25px;*/
+/*    font-weight: 600;*/
+/*    color: #ada77b;*/
+/*    !*background: rgba(1, 5, 1, 0.13);*!*/
+/*}*/
+/*@media (min-width: 1200px) {*/
+/*    .divText{*/
+/*        !*background: rgba(1, 5, 1, 0.13);*!*/
+/*        top: 20px;*/
+/*        font-size:23px;*/
+/*    }*/
+/*}*/
 @keyframes heartBeat {
-
     from{
         margin: 20px 40px 0 10px;
     }
@@ -342,15 +354,14 @@ body{
     }
 }
 .wrapper {
-    border-radius: 15px;
+    /*border-radius: 15px;*/
     margin: 65px 55px 45px 10px;
-    background-color: #133c3b;
     width: 90%;
     position: relative;
     max-width: 100%;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(1, 5, 1, 0.95);
-    animation: heartBeat 3s;
+    /*animation: heartBeat 1s;*/
 
 }
 .list-reset {
@@ -359,8 +370,7 @@ body{
     padding: 0;
     display: -webkit-box;
     display: flex;
-     /*width: calc(30% - 4px);*/
-     min-height: 350px;
+    min-height: 350px;
     height: 70vh;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -378,7 +388,10 @@ body{
     background: #f9f9f9;
     color: black;
 }
-.list-reset li img {
+.list-reset li .data {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-top: 0;
     -webkit-transition: all 600ms ease;
     transition: all 600ms ease;
     opacity: 0;
@@ -386,9 +399,24 @@ body{
     transform: translatey(10px);
     -webkit-transform-origin: bottom;
     transform-origin: bottom;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(251, 251, 251);
+    background: linear-gradient(rgba(243, 233, 250, 0.27), rgba(238, 249, 237, 0.2)),url("../../img/image--004.jpg");
 }
-.list-reset .divText li {
-
+.list-reset li p{
+    margin: 140px;
+    color: #d9ded2;
+    background-color: rgba(26, 26, 26, 0.8);
+    font-weight: lighter;
+    padding: 30px;
 }
 .list-reset li a {
     display: block;
@@ -412,18 +440,7 @@ body{
 .list-reset li span:hover{
      color: black;
  }
-.list-reset li img {
-    pointer-events: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: center;
-    object-position: center;
-}
+
 .list-reset .active {
     z-index: 999;
     background: #fff;
@@ -431,7 +448,7 @@ body{
 .list-reset .active a {
     color: #020805;
 }
-.list-reset .active img {
+.list-reset .active .data {
     opacity: 45%;
     -webkit-transform: translatey(0);
     transform: translatey(0);
@@ -448,7 +465,7 @@ body{
     padding: 130px 0 10px;
     margin-bottom: -18px;
     transform: scale(0.94);
-    animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    animation:  3s;
 }
 
 .text h2:after{
